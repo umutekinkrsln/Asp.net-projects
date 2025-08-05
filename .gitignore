@@ -1,0 +1,22 @@
+# Build klasörleri
+bin/
+obj/
+
+# Visual Studio ayarları
+.vs/
+
+# React build ve bağımlılıkları
+node_modules/
+dist/
+
+# Kullanıcı ayarları
+*.user
+*.suo
+
+# Log dosyaları
+*.log
+
+# Diğer
+react-vite-test/node_modules/
+react-vite-test/dist/
+react-vite-test/
