@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Box, Drawer, List, ListItem, ListItemText, Button, TextField, Typography, Select, MenuItem } from '@mui/material';
 
-// Marker ikonunu düzelt
+// Marker ikonu
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
@@ -13,7 +13,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png'
 });
 
-// WKT -> Koordinat arrayi
+// WKT Koordinat arrayi
 const parseWKT = (wkt) => {
   if (wkt.startsWith("POINT")) {
     const match = wkt.match(/POINT\s*\(([-\d.]+)\s+([-\d.]+)\)/);
@@ -42,7 +42,7 @@ const parseWKT = (wkt) => {
   return [];
 };
 
-// Koordinat arrayi -> WKT
+// Koordinat arrayi WKT
 const toWKT = (geometryType, coords) => {
   if (geometryType === "Point") {
     const [lat, lng] = coords[0];
